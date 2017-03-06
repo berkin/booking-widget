@@ -1,3 +1,3 @@
 # booking widget
-npm install
-npm start
+- npm install
+- npm start
