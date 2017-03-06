@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Tether from 'tether';
 import Input from './Input';
 import List from './List.js';
+import './Autocomplete.css';
 
 class Autocomplete extends Component {
 	constructor() {

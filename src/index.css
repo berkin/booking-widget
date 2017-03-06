@@ -1,5 +1,5 @@
-@import '~normalize.css';
 @import '~purecss';
+@import '../node_modules/purecss/build/grids-responsive.css';
 
 *,
 *:after,
