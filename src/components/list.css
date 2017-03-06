@@ -1,0 +1,26 @@
+.List {
+	border: 1px solid #f3f3f3;
+	background: #fff;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	color: #555;
+
+}
+
+.List li {
+	border-bottom: 1px solid #f3f3f3;
+	padding: 10px;
+
+	max-width: 200px;
+}
+
+.no-result {
+	background: #fff;
+	border: 1px solid #e3e3e3;
+	color: #555;
+	padding: 10px;
+	margin: 0;
+	min-width: 200px;
+	font-size: 12px;
+}

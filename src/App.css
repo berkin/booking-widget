@@ -16,7 +16,7 @@ fieldset {
 
 .booking-form {
 	background: rgba(0, 0, 0, .8);
-	padding: 10px;
+	padding: 15px;
 
 }
 .Input {
@@ -43,3 +43,22 @@ input[type=text] {
 	color: #555;
 }
 
+
+.pure-g {
+	margin: 0 -5px;
+}
+.pure-g [class*=pure-u] {
+	padding: 0 5px 10px;
+}
+
+.form-group {
+	margin-bottom: 10px;
+}
+
+.button {
+	background: #168ccc;
+	border: 0;
+	padding: 10px 0;
+	width: 100%;
+	text-align: center;
+}

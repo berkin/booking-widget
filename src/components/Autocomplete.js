@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Tether from 'tether';
 import Input from './Input';
 import List from './List.js';
 
@@ -12,6 +13,15 @@ class Autocomplete extends Component {
 			items: [],
 			value: ''
 		}
+	}
+
+	componentDidMount() {
+		new Tether({
+		  target: this.textInput.textInput,
+		  element: this.resultContainer,
+		  attachment: 'top left',
+		  targetAttachment: 'bottom left'
+		});
 	}
 
 	handleKeyUp(e) {
@@ -43,7 +53,7 @@ class Autocomplete extends Component {
 	}
 
 	handleItemClick(item) {
-		this.setState({value: item.name});
+		this.setState({value: item.name, isActive: false});
 	}
 
 	handleChange(e) {
@@ -58,18 +68,20 @@ class Autocomplete extends Component {
 					placeholder={this.props.placeholder}
 					autoComplete="off"
 					type="text"
+					ref={item => this.textInput = item}
 					onKeyUp={this.handleKeyUp.bind(this)}
 					onFocus={this.handleFocus.bind(this)}
 					onChange={this.handleChange.bind(this)}
 					value={this.state.value}
 			/>
-			<div className="Autocomplete-Result" />
+			<div className="Autocomplete-Result" ref={item => this.resultContainer = item}>
 				<List
 					items={this.state.items}
 					isActive={this.state.isActive}
 					selected={this.state.selected}
 					onItemClick={this.handleItemClick.bind(this)}
 				/>
+			</div>
 			</div>
 	);
 	}

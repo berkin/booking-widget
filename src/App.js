@@ -10,20 +10,24 @@ class App extends Component {
 				<h1>Blacklane</h1>
 				<form className="booking-form" name="booking_request_form" id="new_booking_request" action="https://www.blacklane.com/en/booking_requests/transfers/new" acceptCharset="UTF-8" method="get">
 					<input name="utf8" type="hidden" value="✓" />
-					<div id="first-leg" className="pure-g">
+					<div id="first-leg" className="pure-g form-group">
 						<Autocomplete className="pure-u-1-2" type="address" placeholder="From: address, airport, hotel, ..." name="booking_request[pickup]" />
 						<Autocomplete className="pure-u-1-2" type="address" placeholder="To: address, airport, hotel, ..." name="booking_request[dropoff]" />
-						<Input type="date" name="booking_request[at_date]" />
-						<Input type="time" name="booking_request[at_time]" />
+						<Input className="pure-u-1-2" type="date" name="booking_request[at_date]" />
+						<Input className="pure-u-1-2" type="time" name="booking_request[at_time]" />
 					</div>
-					<div id="second-leg">
-						<Autocomplete type="address" placeholder="From: address, airport, hotel, ..." name="booking_request[return_pickup]" />
-						<Autocomplete type="address" placeholder="To: address, airport, hotel, ..." name="booking_request[return_dropoff]" />
-						<Input type="date" name="booking_request[return_at_date]" />
-						<Input type="time" name="booking_request[return_at_time]" />
+					<div id="second-leg" className="pure-g form-group">
+						<Autocomplete className="pure-u-1-2" type="address" placeholder="From: address, airport, hotel, ..." name="booking_request[return_pickup]" />
+						<Autocomplete className="pure-u-1-2" type="address" placeholder="To: address, airport, hotel, ..." name="booking_request[return_dropoff]" />
+						<Input className="pure-u-1-2" type="date" name="booking_request[return_at_date]" />
+						<Input className="pure-u-1-2" type="time" name="booking_request[return_at_time]" />
 					</div>
-				<button>Book a ride</button>
-				</form>
+					<div className="pure-g">
+						<div className="pure-u-1">
+							<button className="button">Book a ride</button>
+						</div>
+					</div>
+					</form>
 			</main>
 	);
 	}

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './list.css';
 
 class List extends Component {
 
@@ -14,7 +15,7 @@ class List extends Component {
 				{this.props.items.map(item => <li className="List-Item" key={item.uuid} onClick={this.props.onItemClick.bind(null, item)}>{item.name}</li>)}
 			</ul>
 			) : (
-			 <p>No Results</p>
+			 <p className="no-result">No Results</p>
 			)}
 			</div>
 	);
